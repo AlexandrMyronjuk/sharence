@@ -288,14 +288,3 @@ body.lock {
 }
 
 /*------- header ---------*/
-
-section {
-   margin-top: 80px;
-}
-section p{
-   margin-top: 20px;
-}
-
-section.red {
-   color: red;
-}
