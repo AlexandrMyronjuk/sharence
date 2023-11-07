@@ -326,9 +326,13 @@ body.lock {
 }
 
 @media (min-width: 768px) {
+   .title {
+      font-size: 3.25rem;
+      line-height: 64px;
+      margin-bottom: 16px;
+   }
    .title-mainSize {
       font-size: 4.125rem;
-      line-height: 64px;
       margin-bottom: 32px;
    }
 }
@@ -361,7 +365,6 @@ body.lock {
       line-height: 127px;
       margin-bottom: 68px;
    }
-
 }
 /*------- first section ---------*/
 
@@ -392,9 +395,10 @@ body.lock {
    margin-right: 14px;
 }
 .second-section__slider {
+   max-width: 320px;
    width: 100%;
    overflow: hidden;
-   margin-bottom: 28px;
+   margin: 0px auto 28px;
 }
 .slider {
    display: flex;
@@ -453,6 +457,47 @@ body.lock {
    background-color: var(--activeCol);
 }
 
+@media (min-width: 768px) {
+   .second-section__icon img {
+      width: 64px;
+      height: 64px;
+      margin-right: 16px;
+   }
+   .second-section__slider {
+      max-width: 464px;
+      margin: 0px auto 28px;
+   }
+   .slider__item {
+      flex: 1 0 464px;
+      height: 400px;
+      padding: 48px;
+   }
+   .slider__title {
+      font-size: 1.0625rem;
+      line-height: 25.50px;
+      margin-bottom: 16px;
+   }
+   .slider__description {
+      font-size: 1.3125rem;
+      line-height: 32px;
+   }
+   .slide__description-second {
+      font-size: 2rem;
+      line-height: 43px;
+   }
+}
+
+@media (min-width: 900px) {
+   
+}
+
+@media (min-width: 1200px) {
+  
+}
+
+@media (min-width: 1440px) {
+   
+}
 
 /*------- second section ---------*/
 
