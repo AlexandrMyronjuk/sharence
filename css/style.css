@@ -625,9 +625,65 @@ body.lock {
       font-size: 3rem;
       line-height: 68px;
    }
-   
+}
+/*------- second section ---------*/
+
+/*------- third section ---------*/
+.section {
+}
+.third-section__wrapper {
+   width: 100%;
+   height: 437px;
+   margin-top: 28px;
+   position: relative;
+   overflow: hidden;
+}
+.img-box {
+   width: 1570px;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 0;
+   left: -700px;
+}
+.img-box__item {
+   width: 205px;
+   height: 437px;
+   margin-right: 14px;
+}
+.img-box__img {
+   width: 100%;
+   height: 100%;
+   border-radius: 15px;
 }
 
-/*------- second section ---------*/
+@media (min-width: 425px) {
+   .third-section__wrapper {
+      height: 550px;
+   }
+   .img-box {
+      left: -600px;
+   }
+   .img-box__item {
+      width: 260px;
+      height: 550px;
+      margin-right: 16px;
+   }
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1024px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1440px) {
+
+}
+/*------- third section ---------*/
 
 /*------- main ---------*/
