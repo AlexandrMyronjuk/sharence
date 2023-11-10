@@ -4,12 +4,12 @@ const slider = doc.querySelector('.slider');
 const slides = doc.querySelectorAll('.slider__item');
 const dots = doc.querySelectorAll('.slideDot');
 
-let slideWidth = slides[0].offsetWidth + 27;
+
 let slideIndex = 0;
 let transition = true;
 
 slide = function() {
-
+   let slideWidth = slides[1].offsetWidth + 27;
    console.log (slideWidth);
    
    if (transition) {
@@ -20,6 +20,7 @@ slide = function() {
 
    clearDots();
    dots[slideIndex].classList.add('active');
+
 };
 
 dots.forEach ( function (actPh, index) {
