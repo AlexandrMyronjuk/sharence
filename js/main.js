@@ -6,7 +6,11 @@ const headerMenu= doc.querySelector(".menu");
 const headerBurgerBtn = doc.getElementById("burgerBtn");
 const headerExitBtn = doc.getElementById("exitBtn");
 
-console.log('headerExitBtn');
+// for fourth section figure //
+const square = doc.querySelector(".figure__item-square");
+const circle = doc.querySelector(".figure__item-circle");
+
+console.log(square);
 
 headerBurgerBtn.addEventListener("click", (e) => {
    e.target.classList.remove('burger-area__activeBtn');
@@ -25,4 +29,15 @@ headerExitBtn.addEventListener("click", (e) => {
 });
 
 
+window.addEventListener('resize', () => {
+   heightFigure (square);
+   heightFigure (circle);
+
+})
+function heightFigure (elem) {
+   let width = elem.offsetWidth;
+   console.log(width);
+
+   elem.style.height = `${width}px`;
+};
 
