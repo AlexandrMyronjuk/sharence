@@ -657,13 +657,10 @@ body.lock {
    border-radius: 25px;
 }
 
-@media (min-width: 425px) {
-
-}
 @media (min-width: 768px) {
-.third-section__titleBlock {
-   margin-left: 50%;
-}
+   .third-section__titleBlock {
+      margin-left: 50%;
+   }
 }
 @media (min-width: 1024px) {
    .section__container {
@@ -675,54 +672,70 @@ body.lock {
    .section__container {
       padding: 0px 72px;
    }
-
-}
-@media (min-width: 1440px) {
-
 }
 /*------- third section ---------*/
 
 /*------- fourth section ---------*/
-.fourth-section__titleBlock {
-}
 .figure {
    width: 100%;
    height: 400px;
    position: relative;
    overflow: hidden;
 }
-.figure__item {
-  background-image: radial-gradient(circle at 100%, rgba(66, 66, 66, 0.5) 35%, #151516 153%); 
-  border: 1px solid #918F9E;
-}
-.figure__item-square {
-   width: 50%;
-   height: 50%;
-   transform: rotate(-161deg); 
+.figure::after {
+   content: '';
+   width: 250px;
+   height: 250px;
+   transform: rotate(-157deg); 
    position: absolute;
-   top: 5%;
+   top: 0%;
    left: 50%;
+   border-right: 1px solid #918F9E;
+   border-top: 1px solid #918F9E;
+   background-image: linear-gradient(45deg,#161517 48%, #918F9E);
+   z-index: -1;
 }
-.figure__item-circle {
-   width: 70%;
-   height: 70%;
+.figure::before {
+   content: '';
+   width: 300px;
+   height: 300px;
    border-radius: 50%;
    transform: rotate(-30.76deg); 
    position: absolute;
    top: 15%;
    right: 45%;
+   background-image: linear-gradient(84deg,#161517 48%, rgba(141, 140, 141, 0.8));
 }
 
+@media (min-width: 425px) {
+   .figure::after {
+      width: 350px;
+      height: 350px;
+      top: -5px;
+      left: 52%;
+   }
+   .figure::before {
+      width: 400px;
+      height: 400px;
+   }
+}
 @media (min-width: 768px) {
    .fourth-section__titleBlock {
       width: 70%;
       margin-left: 15%;
    }
-   .figure__item-square {
-      width: 40%;
+   .figure {
+      height: 500px;
    }
-   .figure__item-circle {
-      width: 50%;
+   .figure::after {
+      width: 450px;
+      height: 450px;
+      top: -80px;
+      left: 55%;
+   }
+   .figure::before {
+      width: 500px;
+      height: 500px;
    }
 }
 @media (min-width: 1024px) {
@@ -730,6 +743,22 @@ body.lock {
       width: 60%;
       margin-left: 50%;
       transform: translateX(-50%);
+   }
+   .figure::after {
+      width: 550px;
+      height: 550px;
+      top: -70px;
+      left: 53%;
+   }
+   .figure::before {
+      width: 600px;
+      height: 600px;
+   }
+}
+@media (min-width: 1024px) {
+   .figure::after {
+      top: -90px;
+      left: 55%;
    }
 }
 /*------- fourth section ---------*/
