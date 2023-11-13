@@ -1,29 +1,21 @@
 
-const sliderBox = doc.querySelector('.second-section__slider');
-const slider = doc.querySelector('.slider');
-const slides = doc.querySelectorAll('.slider__item');
-const dots = doc.querySelectorAll('.slideDot');
+// Slider second section
+const secondSectionSliderBox = doc.querySelector('#secondSectionSlider');
+const secondSectionSlider = doc.querySelector('#secondSlider');
+const secondSectionSlides = doc.getElementsByName("secondSectionSliderItem");
+const secondSectionDots = doc.getElementsByName("secondSectionSliderDot");
+
+// Slider fifth section
+const fifthSectionSlider = doc.querySelector('#fifthSlider');
+const fifthSectionSlides = doc.getElementsByName("fifthSectionSliderItem");
+const fifthSectionDots = doc.getElementsByName("fifthSectionSliderDot");
 
 
-let slideIndex = 0;
 let transition = true;
+let slideIndex = 0;
 
-slide = function() {
-   let slideWidth = slides[1].offsetWidth + 27;
-   console.log (slideWidth);
-   
-   if (transition) {
-      slider.style.transition = 'transform .5s';
-   }
 
-   slider.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
-
-   clearDots();
-   dots[slideIndex].classList.add('active');
-
-};
-
-dots.forEach ( function (actPh, index) {
+secondSectionDots.forEach ( function (actPh, index) {
 	
 	actPh.setAttribute('data_index', index);
 	const arrPh = actPh.getAttribute ('data_index');
@@ -31,15 +23,41 @@ dots.forEach ( function (actPh, index) {
 	actPh.onclick = function () {
 		slideIndex = arrPh;
 		
-        slide();
+      sliderWork(secondSectionSlider, secondSectionSlides, secondSectionDots);
 
 	}
 });
 
-function clearDots() {
+fifthSectionDots.forEach ( function (actPh, index) {
+	
+	actPh.setAttribute('data_index', index);
+	const arrPh = actPh.getAttribute ('data_index');
+	
+	actPh.onclick = function () {
+		slideIndex = arrPh;
+		
+      sliderWork(fifthSectionSlider, fifthSectionSlides, fifthSectionDots);
+
+	}
+});
+
+
+function sliderWork (slider, slides, dots) {
+   let slideWidth = slides[1].offsetWidth + 27;
+   
+   if (transition) {
+      slider.style.transition = 'transform .5s';
+   }
+
+   slider.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+
+   clearDots(dots);
+   dots[slideIndex].classList.add('active');
+};
+
+function clearDots(dots) {
 	dots.forEach( function( item ) {
 		item.classList.remove( 'active' );
 	} );
 };
-
 

@@ -415,8 +415,6 @@ body.lock {
 .section {
    margin-top: 84px;
 }
-.second-section {
-}
 .second-section__wrapper {
    display: flex;
    flex-direction: column;
@@ -435,7 +433,7 @@ body.lock {
    height: 60px;
    margin-right: 14px;
 }
-.second-section__slider {
+.section__slider {
    max-width: 266px;
    width: 100%;
    overflow: hidden;
@@ -496,7 +494,7 @@ body.lock {
 }
 
 @media (min-width: 375px) {
-   .second-section__slider {
+   .section__slider {
       max-width: 320px;
    }
    .slider__item {
@@ -510,7 +508,7 @@ body.lock {
       height: 64px;
       margin-right: 16px;
    }
-   .second-section__slider {
+   .section__slider {
       max-width: 464px;
       margin: 0px auto 28px;
    }
@@ -544,7 +542,7 @@ body.lock {
       left: 0px;
       padding: 44px;
    }
-   .second-section__slider {
+   .section__slider {
       max-width: 1599px;
       width: 100%;
       overflow: visible;
@@ -763,4 +761,12 @@ body.lock {
 }
 /*------- fourth section ---------*/
 
+/*------- fifth section ---------*/
+.fifth-section__wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   align-items: flex-start;
+}
+/*------- fifth section ---------*/
 /*------- main ---------*/
