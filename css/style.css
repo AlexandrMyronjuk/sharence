@@ -446,7 +446,6 @@ body.lock {
 }
 .slider__item {
    flex: 1 0 266px;
-   height: 350px;
    border-radius: 36px;
    padding: 44px 28px;
    background-color: var(--slideBgCol);
@@ -514,7 +513,6 @@ body.lock {
    }
    .slider__item {
       flex: 1 0 464px;
-      height: 400px;
       padding: 48px;
    }
    .slider__title {
@@ -559,11 +557,13 @@ body.lock {
       background-color: var(--slideBgCol);
       margin-right: 0px;
    }
-   .slider__item-empty {
-      display: block;
+   .slider__item-bgCol {
+      background-color: var(--mainBgCol);
+   }
+   .slider__item-after {
       position: relative;
    }
-   .slider__item-empty::after {
+   .slider__item-after::after {
       content: '';
       position: absolute;
       bottom: -50px;
@@ -573,11 +573,11 @@ body.lock {
       background-color: var(--slideBgCol);
       z-index: -1;
    }
+   .slider__item-empty {
+      display: block;
+   }
    .slider__item-special {
       order: 3;
-   }
-   .slider__item-empty, .slider__item-special {
-      background-color: var(--mainBgCol);
    }
    .slider__title {
       font-size: 1.125rem;
@@ -587,7 +587,6 @@ body.lock {
    .toggle-box {
       display: none;
    }
-   
 }
 
 @media (min-width: 1200px) {
@@ -596,14 +595,12 @@ body.lock {
    }
    .slider__item {
       flex: 1 0 500px;
-      height: 440px;
       padding: 70px;
    }
    .slide__description {
       font-size: 2.25rem;
       line-height: 48px;
    }
-  
 }
 
 @media (min-width: 1440px) {
@@ -762,11 +759,45 @@ body.lock {
 /*------- fourth section ---------*/
 
 /*------- fifth section ---------*/
+.fifth-section {
+   position: relative;
+   margin-top: -40px;
+   z-index: 1;
+}
 .fifth-section__wrapper {
    display: flex;
    flex-direction: column;
    justify-content: start;
    align-items: flex-start;
+}
+.fifthSectionSlider__title {
+   font-size: 1.875rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 2.3125rem;
+   background: linear-gradient(270deg, #80A0E2 0%, #E1C8CC 48.93%, #80CCE0 100%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin: 14px 0px;
+}
+.fifthSectionSlider__description {
+   color: var(--textCol);
+   font-size: 1.125rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.75rem;
+}
+@media (min-width: 768px) {
+   .fifthSectionSlider__title {
+      font-size: 2rem;
+      line-height: 2.6875rem;
+      margin: 16px 0px;
+   }
+   .fifthSectionSlider__description {
+      font-size: 1.3125rem;
+      line-height: 2rem;
+   }
 }
 /*------- fifth section ---------*/
 /*------- main ---------*/
